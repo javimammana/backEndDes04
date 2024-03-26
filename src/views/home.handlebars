@@ -1,11 +1,28 @@
-<h1>Productos</h1>
-
-<div>
-    {{#each products}}
-        <div>
-            <p>{{this.title}}</p>
+<div class="contenedor">
+{{#if products}}
+    <div class="sticky">
+        <h1>Productos</h1>
+        <div class="line"></div>
+    </div>
+    <div class="contenedorCard">
+        {{#each products}}
+        <div class="card">
+            <div>
+                <img class="img" src="img/{{ this.thumbnail }}">
+            </div>
+            <h4>{{ title }}</h4>
+            <p>{{ this.description }}</p>
+            <div class="cardInfo">
+                <p>Stock: {{ this.stock }}</p>
+                <h5>${{ this.price }} .-</h5>
+            </div>
+            <button class="btn">Comprar</button>
         </div>
-    {{/each}}
+        {{/each}}
+        {{else}}
+        <h2>No hay productos</h2>
+        {{/if}}
+    </div>
 </div>
 
 

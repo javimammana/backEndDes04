@@ -48,6 +48,7 @@ class ProductManager {
                 const newProduct = await {
                         ...elemento,
                         thumbnail: ["sinImg.png"],
+                        status: true,
                         id: this.productos.length + 1
                     }
                     this.productos.push(newProduct);

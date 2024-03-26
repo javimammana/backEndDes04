@@ -1,28 +1,29 @@
-<h1>Manejo de productos en tiempo real</h1>
+<div class="contenedor">
+    <div class="rtAddPrd">
+        <div class="realTime">
+            <h1>Agregar Productos</h1>
+        </div>
 
-<div class="sticky">
-    <div class="listProducts">
-        <h1>Agregar productos</h1>
+            <form id="addProductForm" class="rtForm">
+                <input class="rtFormItem" type="text" placeholder="Nombre de producto" name="title" id="title" required>
+                <input class="rtFormItem" type="text" placeholder="Categoria de producto" name="category" id="category" required>
+                <input class="rtFormItem" type="text" placeholder="Descripcion del producto" name="description" id="description" required>
+                <input class="rtFormItem" type="number" placeholder="Precio" name="price" id="price" required>
+                <input class="rtFormItem" type="text" placeholder="Codigo de producto" name="code" id="code" required>
+                <input class="rtFormItem" type="number" placeholder="Stock de producto" name="stock" id="stock" required>
+
+                <button class="rtFormBtn" type="submit" id="button">Cargar</button>
+            </form>
+
     </div>
-    <div class="listProducts">
-        <form id="addProductForm" class="form">
-            <input class="formItem" type="text" placeholder="Nombre de producto" name="title" id="title" required>
-            <input class="formItem" type="text" placeholder="Categoria de producto" name="category" id="category" required>
-            <input class="formItem" type="text" placeholder="Descripcion del producto" name="description" id="description" required>
-            <input class="formItem" type="number" placeholder="Precio" name="price" id="price" required>
-            <input class="formItem" type="text" placeholder="Codigo de producto" name="code" id="code" required>
-            <input class="formItem" type="number" placeholder="Stock de producto" name="stock" id="stock" required>
-
-            <button class="formBtn" type="submit" id="button">Cargar</button>
-        </form>
+    <div class="sticky">
+        <h1>Productos en Base</h1>
+        <div class="line"></div>
     </div>
-    <div class="listProducts">
-        <h1>Productos</h1>
+
+    <div class="listProducts" id="listProducts">
+
     </div>
-</div>
-
-<div class="listProducts" id="listProducts">
-
 </div>
 
 

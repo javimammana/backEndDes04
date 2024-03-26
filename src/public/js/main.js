@@ -52,27 +52,27 @@ socket.on("listProduct", (data) => {
     let listProducts = "";
 
     data.forEach((element) => {
-        listProducts += `<div class="card">
-                            <div class="flex">
-                                <div>
-                                    <img class="img" class="img" src="img/${element.thumbnail}">
+        listProducts += `<div class="rtCard">
+                            <div class="rtFlex">
+                                <div class="rtImgBox">
+                                    <img class="rtImg" src="img/${element.thumbnail}">
                                 </div>
-                                <div class="info">
-                                    <div class="cardInfo1">
+                                <div class="rtInfo">
+                                    <div class="rtCardInfo1">
                                         <h3>${element.title}</h3>
                                         <div>
                                             <h5>Categoria: ${element.category}</h5>
                                             <p>${element.description}</p>
                                         </div>
                                     </div>
-                                    <div class="cardInfo2">
+                                    <div class="rtCardInfo2">
                                         <p>Codigo: ${element.code}  -  Stock: ${element.stock}</p>
                                         <h5>$ ${element.price}.-</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="delete">
-                                <button class="btn" onClick="deleteItem('${element.id}')">Borrar</button>
+                            <div class="rtDelete">
+                                <button class="rtBtn" onClick="deleteItem('${element.id}')">Borrar</button>
                             </div>
                         </div>`;
     });
