@@ -6,18 +6,18 @@ const deleteItem = (id) => {
     const data = Number(id);
     socket.emit("deleteProduct", data);
 
-    // Toastify({
-    //     text: "Producto eliminado",
-    //     duration: 3000,
-    //     newWindow: true,
-    //     close: true,
-    //     gravity: "top", // `top` or `bottom`
-    //     position: "right", // `left`, `center` or `right`
-    //     style: {
-    //         background: "linear-gradient(to right, #353434, #000)",
-    //         color: "#ebce0f",
-    //     },
-    // }).showToast();
+    Toastify({
+        text: "Producto eliminado",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        style: {
+            background: "linear-gradient(to right, #353434, #000)",
+            color: "#ebce0f",
+        },
+    }).showToast();
 };
 
 button.addEventListener("click", (e) => {
@@ -44,6 +44,22 @@ button.addEventListener("click", (e) => {
 
     form.reset();
 
+});
+
+socket.on("resultado", (data) => {
+    console.log(data);
+    Toastify({
+        text: data,
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        style: {
+            background: "linear-gradient(to right, #353434, #000)",
+            color: "#ebce0f",
+        },
+    }).showToast();
 });
 
 socket.on("listProduct", (data) => {

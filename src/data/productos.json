@@ -206,31 +206,5 @@
 			"sinImg.png"
 		],
 		"status": true
-	},
-	{
-		"id": 17,
-		"title": "Producto 17",
-		"price": 12.99,
-		"description": "Descripción del producto 17",
-		"category": "Hogar",
-		"stock": 40,
-		"code": "PRD017",
-		"thumbnail": [
-			"sinImg.png"
-		],
-		"status": true
-	},
-	{
-		"id": 18,
-		"title": "Producto 18",
-		"price": 29.99,
-		"description": "Descripción del producto 18",
-		"category": "Moda",
-		"stock": 30,
-		"code": "PRD018",
-		"thumbnail": [
-			"sinImg.png"
-		],
-		"status": true
 	}
 ]

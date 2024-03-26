@@ -38,7 +38,7 @@ class ProductManager {
         const validacion = await this.validate(elemento);
 
         if (!validacion) {
-            return {error: "Todos los campos deben estar completos, para cargar el producto"};
+            return {error: "Todos los campos deben estar completos.-"};
         }
 
         if (elemento) {
@@ -56,7 +56,7 @@ class ProductManager {
 
                     const respuesta = await this.saveProduct(this.productos);
                     return !respuesta 
-                    ? {mensaje: "Producto agregado a la base"}
+                    ? {error: "Producto agregado a la base.-"}
                     : {error: "Hubo un error agregar el producto a la base"};
                 } 
                 console.log ("Producto OK");

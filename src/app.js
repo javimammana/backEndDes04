@@ -51,9 +51,10 @@ io.on("connection", async (socket) => {
 
     socket.on("addForForm", async (data) => {
         console.log(data);
-        await manager.addProduct(data);
+        const resultado = await manager.addProduct(data);
+        console.log (resultado);
         socket.emit("listProduct", await manager.getProducts());
-        // socketClient.emit("resultado", "Producto agregado"); //Aplicar la respuesta para mostrar en pantalla.-
+        socket.emit("resultado", resultado.error); //Aplicar la respuesta para mostrar en pantalla.-
     });
 })
 
